@@ -14,6 +14,8 @@ ENV TZ=Asia/Shanghai \
     LANG=C.UTF-8 \
     APP_DIR=/usr/local/go_found
 
+VOLUME /usr/local/go_found/data
+
 COPY --from=builder /app/gofound ${APP_DIR}/gofound
 
 WORKDIR ${APP_DIR}
